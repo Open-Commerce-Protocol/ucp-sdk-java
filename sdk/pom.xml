@@ -6,7 +6,7 @@
 
   <groupId>io.deeplumen</groupId>
   <artifactId>ucp-sdk</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <name>ucp-sdk</name>
   <description>Java SDK for the Universal Commerce Protocol (models generated from UCP JSON Schemas).</description>
   <url>https://deeplumen.io</url>
@@ -17,6 +17,28 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+
+  <developers>
+    <developer>
+      <name>Universal Commerce Protocol</name>
+      <email>contact@deeplumen.io</email>
+      <organization>DeepLumen</organization>
+      <organizationUrl>https://deeplumen.io</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/Universal-Commerce-Protocol/ucp-sdk-java.git</connection>
+    <developerConnection>scm:git:ssh://github.com:Universal-Commerce-Protocol/ucp-sdk-java.git</developerConnection>
+    <url>https://github.com/Universal-Commerce-Protocol/ucp-sdk-java/tree/main</url>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>central</id>
+      <url>https://central.sonatype.com/</url>
+    </repository>
+  </distributionManagement>
 
   <properties>
     <java.version>17</java.version>
@@ -135,6 +157,17 @@
             </configuration>
           </execution>
         </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>0.6.0</version>
+        <extensions>true</extensions>
+        <configuration>
+          <publishingServerId>central</publishingServerId>
+          <autoPublish>false</autoPublish>
+        </configuration>
       </plugin>
     </plugins>
   </build>
