@@ -11,6 +11,19 @@ import java.util.Optional;
  *
  * <p>This type does not replace any generated field types. It exists purely to make it easier to
  * read/write these values without losing forward-compatibility.
+ *
+ * <p>Typical JSON shape:
+ *
+ * <pre>{@code
+ * {"name":"dev.ucp.shopping.checkout","version":"2026-01-11"}
+ * }</pre>
+ *
+ * <p>This view can:
+ *
+ * <ul>
+ *   <li>Parse from {@code Map}, {@code JsonNode}, or an existing {@code CapabilityRef}
+ *   <li>Convert back into a {@code Map<String, Object>} for assigning into {@code List<Object>}
+ * </ul>
  */
 public record CapabilityRef(String name, String version, String extendsName) {
   public CapabilityRef {
@@ -67,4 +80,3 @@ public record CapabilityRef(String name, String version, String extendsName) {
     return result;
   }
 }
-

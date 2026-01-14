@@ -3,7 +3,15 @@ package io.deeplumen.ucp.helpers;
 /**
  * Common UCP HTTP route paths.
  *
- * <p>These are provided as optional string constants. They do not enforce any routing behavior.
+ * <p>These are provided as optional string constants. They do not enforce any routing behavior,
+ * versioning policy, or server-specific compatibility aliases.
+ *
+ * <p>Usage:
+ *
+ * <pre>{@code
+ * URI wellKnown = baseUri.resolve(UcpRoutes.WELL_KNOWN_UCP);
+ * URI complete = baseUri.resolve(UcpRoutes.checkoutSessionComplete(checkoutId));
+ * }</pre>
  */
 public final class UcpRoutes {
   private UcpRoutes() {}
@@ -24,4 +32,3 @@ public final class UcpRoutes {
     return checkoutSessionById(checkoutId) + "/cancel";
   }
 }
-

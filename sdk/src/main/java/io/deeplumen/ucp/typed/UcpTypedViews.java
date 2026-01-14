@@ -11,6 +11,15 @@ import java.util.Objects;
  *
  * <p>These helpers do not modify or replace generated types. They only offer convenience views for
  * fields that are intentionally left open-ended by the schema.
+ *
+ * <p>Example:
+ *
+ * <pre>{@code
+ * List<CapabilityRef> caps = UcpTypedViews.checkoutCapabilities(checkout.getUcp());
+ * for (CapabilityRef cap : caps) {
+ *   System.out.println(cap.name() + "@" + cap.version());
+ * }
+ * }</pre>
  */
 public final class UcpTypedViews {
   private UcpTypedViews() {}
@@ -45,4 +54,3 @@ public final class UcpTypedViews {
     return capabilityRefs(ucpMeta.getCapabilities());
   }
 }
-

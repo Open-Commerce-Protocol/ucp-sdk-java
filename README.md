@@ -88,3 +88,5 @@ mvn -DskipTests clean install
 *   **Custom Telemetry:** Support for custom "buried points" (analytics/tracking).
 *   **Enhanced Observability:** Richer logging and configurable storage types.
 
+## Contact
+For specialized questions, please reach out to: ucp@deeplumen.io
