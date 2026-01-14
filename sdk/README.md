@@ -6,6 +6,16 @@ Java UCP SDK models generated from the official UCP schemas at `../ucp/spec` (UC
 
 API docs: https://deeplumen.io/ucp-sdk/apidocs/
 
+## Optional helpers (non-opinionated)
+
+This artifact intentionally does **not** include any HTTP/MCP/Webhook/agent-flow client implementation.
+It provides:
+
+- Generated models in `io.deeplumen.ucp.models.*`
+- Optional, non-binding helpers:
+  - Constants in `io.deeplumen.ucp.helpers.*`
+  - Typed views for open-ended schema fields in `io.deeplumen.ucp.typed.*`
+
 ## Quick start
 ```bash
 cd sdk

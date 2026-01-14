@@ -60,6 +60,10 @@ The following artifacts are planned for future release under the `io.deeplumen` 
 Maven coordinates: `io.deeplumen:ucp-sdk`  
 Models package: `io.deeplumen.ucp.models.*`
 
+Optional helpers (no transport/flow implementation):
+- Constants: `io.deeplumen.ucp.helpers.*`
+- Typed views: `io.deeplumen.ucp.typed.*`
+
 ## API Docs
 
 - Javadoc (GitHub Pages): `https://deeplumen.io/ucp-sdk/apidocs/`
