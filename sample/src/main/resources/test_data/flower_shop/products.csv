@@ -1,0 +1,3 @@
+id,title,price,currency,image_url,category,promotion_id
+bouquet_roses,Red Rose Bouquet,2599,USD,https://example.com/rose.jpg,flowers,promo10
+pot_ceramic,Ceramic Pot,2100,USD,https://example.com/pot.jpg,accessories,

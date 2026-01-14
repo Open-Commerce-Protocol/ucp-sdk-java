@@ -1,0 +1,3 @@
+[submodule "ucp"]
+	path = ucp
+	url = https://github.com/Universal-Commerce-Protocol/ucp

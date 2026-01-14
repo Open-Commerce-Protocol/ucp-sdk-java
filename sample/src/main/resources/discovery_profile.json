@@ -1,0 +1,71 @@
+{
+  "ucp": {
+    "version": "2026-01-11",
+    "services": {
+      "dev.ucp.shopping": {
+        "version": "2026-01-11",
+        "spec": "https://ucp.dev/specification/overview",
+        "rest": {
+          "schema": "https://ucp.dev/services/shopping/rest.openapi.json",
+          "endpoint": "http://localhost:8080"
+        },
+        "mcp": null,
+        "a2a": null,
+        "embedded": null
+      }
+    },
+    "capabilities": [
+      {
+        "name": "dev.ucp.shopping.checkout",
+        "version": "2026-01-11",
+        "spec": "https://ucp.dev/specification/checkout",
+        "schema": "https://ucp.dev/schemas/shopping/checkout.json"
+      },
+      {
+        "name": "dev.ucp.shopping.fulfillment",
+        "version": "2026-01-11",
+        "spec": "https://ucp.dev/specification/fulfillment",
+        "schema": "https://ucp.dev/schemas/shopping/fulfillment.json",
+        "extends": "dev.ucp.shopping.checkout"
+      },
+      {
+        "name": "dev.ucp.shopping.discount",
+        "version": "2026-01-11",
+        "spec": "https://ucp.dev/specification/discount",
+        "schema": "https://ucp.dev/schemas/shopping/discount.json",
+        "extends": "dev.ucp.shopping.checkout"
+      }
+    ]
+  },
+  "payment": {
+    "handlers": [
+      {
+        "id": "mock_payment_handler",
+        "name": "dev.ucp.mock_payment",
+        "version": "2026-01-11",
+        "spec": "https://ucp.dev/specs/mock",
+        "config_schema": "https://ucp.dev/schemas/mock.json",
+        "instrument_schemas": [
+          "https://ucp.dev/schemas/shopping/types/card_payment_instrument.json"
+        ],
+        "config": {
+          "supported_tokens": [
+            "success_token",
+            "fail_token"
+          ]
+        }
+      }
+    ]
+  },
+  "signing_keys": [
+    {
+      "kid": "business_2025",
+      "kty": "EC",
+      "crv": "P-256",
+      "x": "WbbXwVYGdJoP4Xm3qCkGvBRcRvKtEfXDbWvPzpPS8LA",
+      "y": "sP4jHHxYqC89HBo8TjrtVOAGHfJDflYxw7MFMxuFMPY",
+      "use": "sig",
+      "alg": "ES256"
+    }
+  ]
+}

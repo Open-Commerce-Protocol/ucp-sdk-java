@@ -1,0 +1,2 @@
+id,description,discount_type,amount,applies_to
+promo10,10% off everything,PERCENT,10,all

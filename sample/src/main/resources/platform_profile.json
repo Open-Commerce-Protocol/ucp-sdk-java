@@ -1,0 +1,43 @@
+{
+  "ucp": {
+    "version": "2026-01-11",
+    "capabilities": [
+      {
+        "name": "dev.ucp.shopping.checkout",
+        "version": "2026-01-11",
+        "spec": "https://ucp.dev/specification/checkout",
+        "schema": "https://ucp.dev/schemas/shopping/checkout.json"
+      },
+      {
+        "name": "dev.ucp.shopping.fulfillment",
+        "version": "2026-01-11",
+        "spec": "https://ucp.dev/specification/fulfillment",
+        "schema": "https://ucp.dev/schemas/shopping/fulfillment.json",
+        "extends": "dev.ucp.shopping.checkout"
+      },
+      {
+        "name": "dev.ucp.shopping.order",
+        "version": "2026-01-11",
+        "spec": "https://ucp.dev/specification/order",
+        "schema": "https://ucp.dev/schemas/shopping/order.json",
+        "config": {
+          "webhook_url": "http://localhost:8080/webhooks/partners/platform/events/order"
+        }
+      }
+    ]
+  },
+  "payment": {
+    "handlers": [
+      {
+        "id": "mock_payment_handler",
+        "name": "dev.ucp.mock_payment_handler",
+        "version": "2026-01-11",
+        "spec": "https://ucp.dev/specification/payments/tokenization",
+        "config_schema": "https://ucp.dev/schemas/payments/merchant_tokenizer.json",
+        "instrument_schemas": [
+          "https://ucp.dev/schemas/shopping/types/card_payment_instrument.json"
+        ]
+      }
+    ]
+  }
+}
