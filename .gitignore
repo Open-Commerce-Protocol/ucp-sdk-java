@@ -1,0 +1,91 @@
+.vscode
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Maven
+/target/
+**/target/
+dependency-reduced-pom.xml
+buildNumber.properties
+release.properties
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+
+# Generated sources
+/generated-sources/
+/generated/
+generated-sources/**
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+out/
+
+# VS Code
+.vscode/
+
+# Gradle
+.gradle/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Python
+venv/
+ENV/
+env/
+.venv/
+__pycache__/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE/workspace files
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/shelf
+
+# Temporary files
+*.swp
+*~
+# Coverage and reports
+coverage/
+*.lcov
+
+# Misc
+*.class
+*.jar.original
+
